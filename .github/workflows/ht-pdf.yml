@@ -8,13 +8,12 @@ jobs:
     name: HT pdf processing
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Clone PRIVATE repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        uses: actions/checkout@v3
         with:
-          owner: 'plindman'
-          repository: 'ht-pdf'
-          access-token: ${{ secrets.HTPDFREPO }}
+          repository: 'plindman/ht-pdf'
+          token: ${{ secrets.HTPDFREPO }}
       - name: Access cloned repository content
         run: |
           cd ht-pdf
