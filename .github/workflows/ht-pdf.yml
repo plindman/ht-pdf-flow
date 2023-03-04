@@ -1,0 +1,21 @@
+# .github/workflows/ht-pdf.yaml
+name: ht-pdf Action
+on: [push]
+
+jobs:
+  ht-pdf:
+    runs-on: ubuntu-latest
+    name: HT pdf processing
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Clone PRIVATE repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: 'plindman'
+          repository: 'ht-pdf'
+          access-token: ${{ secrets.HTPDFREPO }}
+      - name: Access cloned repository content
+        run: |
+          cd ht-pdf
+          ls -la
