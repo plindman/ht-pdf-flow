@@ -1,5 +1,5 @@
 # action.yml
-name: 'Custom GitHub Action'
+name: 'Python Demo GitHub Action'
 description: 'A GitHub Action that takes an input and returns the square of the number'
 inputs:
   num:
