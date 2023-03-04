@@ -14,7 +14,7 @@ jobs:
           find ${{ github.workspace }} -type f
       - name: Fetch num squared
         id: get_square
-        uses: /actions/python-demo-action.yml
+        uses: ./actions/
         # Uses the action we created in local repo
         # or use a released GitHub Action
         # uses: shipyard/github-action/fetch-shipyard-env@1.0.0
