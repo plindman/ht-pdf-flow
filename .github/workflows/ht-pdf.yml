@@ -8,6 +8,10 @@ on:
   repository_dispatch:
     types: [ht-pdf-start]
 
+env:
+  SHAREPOINT_USERNAME: ${{ secrets.SHAREPOINT_USERNAME }}
+  SHAREPOINT_PASSWORD: ${{ secrets.SHAREPOINT_PASSWORD }}
+
 jobs:
   ht-pdf:
     runs-on: ubuntu-latest
