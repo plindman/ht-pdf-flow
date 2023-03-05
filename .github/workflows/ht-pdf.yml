@@ -18,6 +18,13 @@ jobs:
       - name: View merged files structure after repository content clone 
         run: |
           ls -la ${{ github.workspace }}/src
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+        shell: bash
       - name: Run the generate_pdf script
         id: generate-pdf-flow
         uses: ./generate-pdf-action/
