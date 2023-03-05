@@ -1,5 +1,5 @@
 # .github/workflows/ht-pdf.yaml
-name: ht-pdf Action
+name: ht-pdf
 on: 
   push:
 
