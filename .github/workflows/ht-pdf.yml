@@ -17,7 +17,7 @@ jobs:
           path: ''
       - name: View merged files structure after repository content clone 
         run: |
-          ls -la ${{ github.workspace }}
+          ls -la ${{ github.workspace }}/src
       - name: Run the generate_pdf script
         id: generate-pdf-flow
         uses: ./generate-pdf-action/
