@@ -38,3 +38,6 @@ jobs:
       - name: Run the generate_pdf script
         id: generate-pdf-flow
         uses: ./generate-pdf-action/
+      - name: View downloaded data files
+        run: |
+          ls -la ${{ github.workspace }}/data
