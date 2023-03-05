@@ -1,10 +1,11 @@
 # .github/workflows/ht-pdf.yaml
 name: ht-pdf Action
 on: 
-  [push]
+  push:
+
   repository_dispatch:
     types: 
-      - htpdf
+      - ht-pdf
 
 jobs:
   ht-pdf:
