@@ -4,8 +4,7 @@ on:
   push:
 
   repository_dispatch:
-    types: 
-      - ht-pdf
+    types: [ht-pdf-start]
 
 jobs:
   ht-pdf:
