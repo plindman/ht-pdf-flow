@@ -9,13 +9,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Clone PRIVATE repository
+      - name: Clone ht-pdf private repository
         uses: actions/checkout@v3
         with:
           repository: 'plindman/ht-pdf'
           token: ${{ secrets.HTPDFREPO }}
-          path: 'ht-pdf'
-      - name: Access cloned repository content
+          path: ''
+      - name: View merged files structure after repository content clone 
         run: |
-          cd ht-pdf
-          ls -la
+          ls -la ${{ github.workspace }}
+      - name: Run the generate_pdf script
+        id: generate-pdf-flow
+        uses: ./generate-pdf-action/
