@@ -25,9 +25,6 @@ jobs:
           repository: 'plindman/ht-pdf'
           token: ${{ secrets.HTPDFREPO }}
           path: ''
-      - name: View merged files structure after repository content clone 
-        run: |
-          ls -la ${{ github.workspace }}/src
       - name: Install Python
         uses: actions/setup-python@v4
         with:
@@ -35,9 +32,6 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
         shell: bash
-      - name: Run the generate_pdf script
+      - name: Build the pdfs
         id: generate-pdf-flow
         uses: ./generate-pdf-action/
-      - name: View downloaded data files
-        run: |
-          ls -la ${{ github.workspace }}/data
