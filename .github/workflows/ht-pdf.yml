@@ -2,8 +2,7 @@
 name: ht-pdf
 on: 
   # push:
-  # workflow_dispatch:
-
+  workflow_dispatch:
   repository_dispatch:
     types: [ht-pdf-start]
 
