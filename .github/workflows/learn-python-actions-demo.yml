@@ -1,5 +1,5 @@
 # .github/workflows/test_action.yaml
-name: Python Demo Action
+name: Learn Python Demo Action
 on: [push]
 
 jobs:
