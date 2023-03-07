@@ -1,9 +1,8 @@
 # .github/workflows/ht-pdf.yaml
 name: ht-pdf
 on: 
-  push:
-
-  workflow_dispatch:
+  # push:
+  # workflow_dispatch:
 
   repository_dispatch:
     types: [ht-pdf-start]
