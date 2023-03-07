@@ -17,9 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     name: HT pdf processing
     steps:
-      - name: wkhtmltopdf 
-        run: |
-          sudo apt-get install xvfb libfontconfig wkhtmltopdf
       - name: Checkout
         uses: actions/checkout@v3
       - name: Clone ht-pdf private repository
